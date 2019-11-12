@@ -1,11 +1,14 @@
 from tkinter import * 
 from tkinter import ttk
+from PIL import ImageTk, Image
+
 window = Tk()
 
 window.title("Econ God")
 
 content = ttk.Frame(window, padding=(3,3,12,12))
-bg_image = PhotoImage(file = "E:\\Econ God\\Econ Project\\EconGod\\Images\\nature.png")
+bg_image = ImageTk.PhotoImage(Image.open("nature.png"))
+#bg_image = PhotoImage(file = "nature.png")
 
 # get the image size
 w = bg_image.width()
@@ -18,7 +21,7 @@ background_label = Label(window, image=bg_image)
 background_label.place(x=0, y=0, relwidth=1, relheight=1)
 
 l1=Label(window, text="Welcome")
-l1.grid(row=1,column=5)
+l1.grid(row=1,column=5, padx=175, pady=5)
 l1.config(font=("Courier", 44))
 
 l2=Label(window, text="Select an option from the\n menu below")
