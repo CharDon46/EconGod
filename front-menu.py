@@ -1,12 +1,20 @@
-from tkinter import *
-
+from tkinter import * 
+from tkinter import ttk
 window = Tk()
 
 window.title("Econ God")
 
-C = Canvas(window, bg="blue", height=250, width=300)
-filename = PhotoImage(file = "C:\\Users\\sec_charlesd\\Documents\\EconProject\\EconGod\\EconGod\\Images\\nature.png")
-background_label = Label(window, image=filename)
+content = ttk.Frame(window, padding=(3,3,12,12))
+bg_image = PhotoImage(file = "E:\\Econ God\\Econ Project\\EconGod\\Images\\nature.png")
+
+# get the image size
+w = bg_image.width()
+h = bg_image.height()
+
+# make the root window the size of the image
+window.geometry("%dx%d" % (w, h))
+
+background_label = Label(window, image=bg_image)
 background_label.place(x=0, y=0, relwidth=1, relheight=1)
 
 l1=Label(window, text="Welcome")
@@ -28,5 +36,14 @@ b4.grid(row=6, column=5)
 b5=Button(window, text="Faculty/Printer\n Lookup", width=14)
 b5.grid(row=7, column=5)
 
+
+window.columnconfigure(0, weight=1)
+window.rowconfigure(0, weight=1)
+content.columnconfigure(0, weight=3)
+content.columnconfigure(1, weight=3)
+content.columnconfigure(2, weight=3)
+content.columnconfigure(3, weight=1)
+content.columnconfigure(4, weight=1)
+content.rowconfigure(1, weight=1)
 
 window.mainloop()
