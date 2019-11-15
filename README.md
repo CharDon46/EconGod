@@ -1,2 +1,2 @@
-# EconGod
+# Organum
 Econ Printer Application
