@@ -4,10 +4,10 @@ from PIL import ImageTk, Image
 
 window = Tk()
 
-window.title("Econ God")
+window.title("Organum")
 
 content = ttk.Frame(window, padding=(3,3,12,12))
-bg_image = ImageTk.PhotoImage(Image.open("nature.png"))
+bg_image = ImageTk.PhotoImage(Image.open("\nature.png"))
 #bg_image = PhotoImage(file = "nature.png")
 
 # get the image size
